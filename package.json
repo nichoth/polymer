@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npm run build-js-main && npm run build-js-deps",
+    "build": "npm run build-js-main && npm run build-js-deps && npm run build-components",
     "build-js-main": "browserify browser/main.js > public/bundle.js -d",
     "build-js-deps": "browserify browser/deps.js > public/deps.js -d",
     "build-components": "vulcanize browser/elmts.html > public/vulcanized.html",
