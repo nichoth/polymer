@@ -5,12 +5,66 @@
   <title>Document</title>
   <script src="deps.js"></script>
   <link rel="import" href="vulcanized.html">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: whitesmoke;
+      padding: 1em;
+    }
+    .main-container {
+      width: 50%;
+      padding: 1em;
+      background-color: white;
+    }
+    paper-button {
+      letter-spacing: 0.1em;
+    }
+    .section {
+      margin-top: 1em;
+    }
+    .button-section {
+      text-align: right;
+    }
+    paper-menu {
+      width: 33%;
+      /*background: whitesmoke !important;*/
+      /*padding-left: 1em;*/
+    }
+  </style>
 </head>
 <body>
-  <paper-menu>
+
+
+
+  <paper-material elevation="1" class="main-container">
+
+    <form is="iron-form" id="test-form" method="post" action="/api/test">
+      <paper-input name="name" label="name"></paper-input>
+      <paper-input name="hairstyle" label="hairstyle"></paper-input>
+      <div class="section button-section">
+        <paper-button raised>submit</paper-button>
+      </div>
+    </form>
+
+  </paper-material>
+
+
+  <script src="bundle.js"></script>
+
+
+
+  <!-- <paper-menu>
     <paper-item>Item 1</paper-item>
     <paper-item>Item 2</paper-item>
   </paper-menu>
   <script src="bundle.js"></script>
+  <script>
+    var all = document.querySelectorAll('paper-item');
+    console.log(all);
+    Array.prototype.forEach.call(all, function(el) {
+      el.addEventListener('click', console.log.bind(console));
+    });
+  </script> -->
+
 </body>
 </html>

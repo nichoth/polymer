@@ -13,7 +13,9 @@ gulp.task('clean', function(cb) {
 
 gulp.task('vulcanize', ['clean'], function() {
   return gulp.src('browser/elmts.html')
-    .pipe(vulcanize())
+    .pipe(vulcanize({
+      inlineCss: true
+    }))
     .pipe(rename('vulcanized.html'))
     .pipe(gulp.dest('public'))
   ;
