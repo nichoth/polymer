@@ -11,7 +11,7 @@
     "start": "ecstatic -p 8000 public"
   },
   "dependencies": {
-    "ecstatic": "^1.0.0",
+    "ecstatic": "^4.1.4",
     "routes": "^2.1.0",
     "webcomponents-lite": "^0.6.0"
   },
